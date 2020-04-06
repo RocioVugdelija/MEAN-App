@@ -15,13 +15,11 @@ export class IncreaserComponent implements OnInit {
   @Output() valueChange : EventEmitter<number> =new EventEmitter;
 
   constructor() { 
-    /* console.log("Text: ", this.text);
-    console.log("Progress: ", this.progress); */
+   
   }
       
   ngOnInit() {
-    /* console.log("Text: ", this.text);
-    console.log("Progress: ", this.progress); */
+   
   }
   
   onChange (newValue: number) {

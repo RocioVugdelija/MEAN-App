@@ -16,18 +16,15 @@ export class SettingsService {
    }
 
   saveSettings() {
-    //console.log('Saved in LocalStorage');
     localStorage.setItem('settings', JSON.stringify(this.settings));
   }
 
   uploadSettings() {
     if( localStorage.getItem('settings')){
       this.settings =JSON.parse( localStorage.getItem('settings'));
-      //console.log('Uploading localstorage');
       this.applyTheme(this.settings.theme);
     }
     else{
-      //console.log("using default theme values");
       this.applyTheme(this.settings.theme);//default theme
     }
   }
